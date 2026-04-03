@@ -16,64 +16,35 @@
     body {
       scroll-behavior: smooth;
       color: white;
+      background: black;
     }
 
     section {
       height: 100vh;
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
-      padding: 20px;
       text-align: center;
       position: relative;
+      padding: 20px;
     }
 
-    /* BACKGROUND */
+    /* BACKGROUND MAGGOT */
     .bg {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      background: url('maggot.jpg') center/cover no-repeat;
-      filter: brightness(0.3);
+      background: url('./maggot.jpg') center/cover no-repeat;
+      filter: brightness(0.25);
       z-index: -1;
     }
 
-    .hero {
-      background: black;
-    }
-
-    h1 {
-      font-size: 50px;
-      margin-top: 15px;
-      letter-spacing: 3px;
-    }
-
-    h2 {
-      margin-bottom: 15px;
-      color: gold;
-    }
-
-    p {
-      max-width: 600px;
-      margin-bottom: 15px;
-    }
-
-    .btn {
-      padding: 12px 20px;
-      background: #25D366;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      margin-top: 10px;
-      font-weight: bold;
-    }
-
+    /* NAV */
     .nav {
       position: fixed;
-      top: 10px;
+      top: 15px;
       right: 20px;
       z-index: 1000;
     }
@@ -89,9 +60,37 @@
       color: gold;
     }
 
-    .logo {
-      width: 180px;
+    /* LOGO FULL */
+    .logo-full {
+      width: 70%;
+      max-width: 700px;
+      filter: drop-shadow(0 0 25px rgba(255, 215, 0, 0.5));
+    }
+
+    /* SECTION STYLE */
+    .dark {
+      background: #111;
+      flex-direction: column;
+    }
+
+    h2 {
+      color: gold;
+      margin-bottom: 15px;
+    }
+
+    p {
+      max-width: 600px;
       margin-bottom: 10px;
+    }
+
+    .btn {
+      padding: 12px 20px;
+      background: #25D366;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      margin-top: 15px;
+      font-weight: bold;
     }
 
   </style>
@@ -107,36 +106,29 @@
   <a href="#kontak">Order</a>
 </div>
 
-<!-- HERO -->
-<section class="hero" id="home">
+<!-- HERO FULL LOGO -->
+<section id="home">
   <div class="bg"></div>
-
-  <img src="aurva_logo_white.jpg" class="logo">
-
-  <h1>AURVA</h1>
-  <p>Premium Dried BSF Larvae</p>
-  <p>Pakan ternak tinggi protein dengan kualitas terbaik.</p>
-
-  <a class="btn" href="#kontak">Order Sekarang</a>
+  <img src="aurva_logo_white.jpg" class="logo-full">
 </section>
 
 <!-- PRODUK -->
-<section id="produk" style="background:#111;">
+<section id="produk" class="dark">
   <h2>Kenapa Aurva?</h2>
   <p>Tinggi protein, lebih hemat pakan, dan kualitas stabil untuk peternak serius.</p>
 </section>
 
 <!-- HARGA -->
-<section id="harga" style="background:#1a1a1a;">
+<section id="harga" class="dark">
   <h2>Harga</h2>
   <p>Maggot kering: Rp XX.XXX / kg</p>
   <p>*Harga grosir tersedia</p>
 </section>
 
 <!-- KONTAK -->
-<section id="kontak" style="background:#111;">
+<section id="kontak" class="dark">
   <h2>Order Sekarang</h2>
-  <p>Klik untuk langsung chat WhatsApp</p>
+  <p>Klik tombol di bawah untuk langsung chat WhatsApp</p>
   <a class="btn" href="https://wa.me/628XXXXXXXXXX" target="_blank">
     Chat WhatsApp
   </a>
