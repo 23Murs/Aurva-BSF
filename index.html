@@ -15,7 +15,6 @@
 
     body {
       scroll-behavior: smooth;
-      background: #111;
       color: white;
     }
 
@@ -27,20 +26,34 @@
       align-items: center;
       padding: 20px;
       text-align: center;
+      position: relative;
+    }
+
+    /* BACKGROUND */
+    .bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('maggot.jpg') center/cover no-repeat;
+      filter: brightness(0.3);
+      z-index: -1;
     }
 
     .hero {
-      background: linear-gradient(135deg, #c9a227, #111);
+      background: black;
     }
 
     h1 {
       font-size: 50px;
-      margin-bottom: 10px;
+      margin-top: 15px;
+      letter-spacing: 3px;
     }
 
     h2 {
       margin-bottom: 15px;
-      color: #c9a227;
+      color: gold;
     }
 
     p {
@@ -58,22 +71,11 @@
       font-weight: bold;
     }
 
-    .features, .price, .testi {
-      background: #1a1a1a;
-    }
-
-    ul {
-      list-style: none;
-    }
-
-    li {
-      margin: 8px 0;
-    }
-
     .nav {
       position: fixed;
       top: 10px;
       right: 20px;
+      z-index: 1000;
     }
 
     .nav a {
@@ -84,13 +86,20 @@
     }
 
     .nav a:hover {
-      color: #c9a227;
+      color: gold;
     }
+
+    .logo {
+      width: 180px;
+      margin-bottom: 10px;
+    }
+
   </style>
 </head>
 
 <body>
 
+<!-- NAV -->
 <div class="nav">
   <a href="#home">Home</a>
   <a href="#produk">Produk</a>
@@ -100,41 +109,34 @@
 
 <!-- HERO -->
 <section class="hero" id="home">
+  <div class="bg"></div>
+
+  <img src="aurva_logo_white.jpg" class="logo">
+
   <h1>AURVA</h1>
   <p>Premium Dried BSF Larvae</p>
-  <p>Pakan ternak tinggi protein dengan kualitas terbaik dan warna lebih bersih.</p>
+  <p>Pakan ternak tinggi protein dengan kualitas terbaik.</p>
+
   <a class="btn" href="#kontak">Order Sekarang</a>
 </section>
 
 <!-- PRODUK -->
-<section class="features" id="produk">
+<section id="produk" style="background:#111;">
   <h2>Kenapa Aurva?</h2>
-  <ul>
-    <li>✔ Tinggi Protein</li>
-    <li>✔ Lebih Hemat Pakan</li>
-    <li>✔ Kualitas Stabil</li>
-    <li>✔ Cocok untuk Ikan, Ayam & Burung</li>
-  </ul>
+  <p>Tinggi protein, lebih hemat pakan, dan kualitas stabil untuk peternak serius.</p>
 </section>
 
 <!-- HARGA -->
-<section class="price" id="harga">
+<section id="harga" style="background:#1a1a1a;">
   <h2>Harga</h2>
-  <p>✔ Maggot kering: Rp XX.XXX / kg</p>
+  <p>Maggot kering: Rp XX.XXX / kg</p>
   <p>*Harga grosir tersedia</p>
 </section>
 
-<!-- TESTIMONI -->
-<section class="testi">
-  <h2>Testimoni</h2>
-  <p>"Lele saya tumbuh lebih cepat!"</p>
-  <p>"Kualitasnya beda dari yang lain."</p>
-</section>
-
 <!-- KONTAK -->
-<section id="kontak">
+<section id="kontak" style="background:#111;">
   <h2>Order Sekarang</h2>
-  <p>Klik tombol di bawah untuk langsung chat WhatsApp</p>
+  <p>Klik untuk langsung chat WhatsApp</p>
   <a class="btn" href="https://wa.me/628XXXXXXXXXX" target="_blank">
     Chat WhatsApp
   </a>
